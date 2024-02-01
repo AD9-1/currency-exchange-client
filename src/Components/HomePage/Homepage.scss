@@ -87,6 +87,7 @@
       }
       p {
         margin-bottom: 12px;
+        color: #520d98e0;
       }
     }
 
@@ -95,6 +96,7 @@
 
       p {
         margin-bottom: 12px;
+        color: #520d98e0;
       }
     }
     &__bothwayarrow {
@@ -114,6 +116,7 @@
       margin-right: 2%;
       p {
         margin-bottom: 12px;
+        color: #520d98e0;
       }
     }
     .currencyOption {
@@ -138,10 +141,10 @@
       border: none;
       box-shadow: 3px 3px #744a4a;
       border-radius: 3px 3px;
-      color: white;
-      font-size: 15px;
-      background-color: rgb(52, 88, 206);
+      font-size: 18px;
+      background-color: rgb(120, 117, 173);
       margin-right: 15px;
+      color: #520d98e0;
     }
   }
   &__lower {
@@ -163,6 +166,7 @@
       text-align: center;
       margin-top: 0px;
       margin-left: 2%;
+      color: #520d98e0;
     }
   }
 }

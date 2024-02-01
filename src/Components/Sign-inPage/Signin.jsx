@@ -1,4 +1,5 @@
 import axios from "axios";
+import "./Signin.scss";
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -6,7 +7,7 @@ const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-  const [isLoginin, setIsLoginin] = useState(false);
+  // const [isLoginin, setIsLoginin] = useState(false);
   const formRef = useRef();
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
@@ -27,13 +28,13 @@ const Signin = () => {
           "http://localhost:5000/registerUsers/loginUser",
           newUser
         );
-        setIsLoginin(true);
+        //setIsLoginin(true);
         sessionStorage.setItem("jwtToken", response.data.token);
         setErrorMsg(response.data.message);
         navigate(`/${response.data.userId}`);
         console.log(response.data.userId);
       } catch (error) {
-        setIsLoginin(false);
+        //setIsLoginin(false);
         setErrorMsg(error.response.data.message);
         console.log(error);
       }
@@ -74,7 +75,7 @@ const Signin = () => {
           <button className="register-button">Submit</button>
         </section>
         <div>
-          <p classNBame="sign-in_error">{errorMsg}</p>
+          <p className="sign-in__error">{errorMsg}</p>
         </div>
       </div>
     </form>

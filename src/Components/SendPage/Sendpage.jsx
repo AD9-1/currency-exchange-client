@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Sendpage.scss";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons";
 import { useLocation, useNavigate } from "react-router-dom";
 import ListUserInfo from "./ListUserInfo";
 
@@ -34,15 +37,35 @@ const Sendpage = () => {
   return (
     <>
       {!jwtToken || !location.state.userId ? (
-        <div>
-          <div className=""></div>
-          <div className="send-field">
-            <section className="send-field__button">
-              <button className="send-button" onClick={handleClick}>
-                Sign-in & Send Money
-              </button>
-            </section>
-          </div>
+        <div className="send-field">
+          <section className="send-field__technique">
+            <div className="card-1">
+              <div className=" card-1__icon">
+                <FontAwesomeIcon className="image" icon={faAddressCard} />
+              </div>
+              <h3>1. Create Account</h3>
+              <p>
+                It takes just a few minutes, and all you need is an email
+                address.
+              </p>
+            </div>
+            <div className="card-1">
+              <div className=" card-1__icon">
+                {" "}
+                <FontAwesomeIcon className="image" icon={faShareFromSquare} />
+              </div>
+              <h3>2. Confirm & Send </h3>
+              <p>
+                Check the currencies and amount are correct and send your money
+                transfer.
+              </p>
+            </div>
+          </section>
+          <section className="send-field__button">
+            <button className="send-button" onClick={handleClick}>
+              Sign-in & Send Money
+            </button>
+          </section>
         </div>
       ) : null}
 

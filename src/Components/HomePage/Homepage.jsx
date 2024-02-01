@@ -1,36 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import currencies from "../../data";
 import "./Homepage.scss";
 import "primeicons/primeicons.css";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Homepage = () => {
-  const currencies = [
-    "AUD",
-    "BGN",
-    "BRL",
-    "CAD",
-    "CHF",
-    "CNY",
-    "CZK",
-    "DKK",
-    "EUR",
-    "GBP",
-    "HKD",
-    "HRK",
-    "HUF",
-    "IDR",
-    "ILS",
-    "INR",
-    "ISK",
-    "JPY",
-    "KRW",
-    "MXN",
-    "MYR",
-    "NOK",
-    "NZD",
-    "PHP",
-  ];
   const [toCurrency, setToCurrency] = useState("INR");
   const [fromCurrency, setFromCurrency] = useState("CAD");
   const [message, setMessage] = useState("p");
@@ -41,9 +16,8 @@ const Homepage = () => {
   const { userId } = useParams();
   const jwtToken = sessionStorage.getItem("jwtToken");
   const isloggedin = !sessionStorage.getItem("jwtToken") ? false : true;
+  const apiKey = process.env.REACT_APP_API_KEY;
 
-  const apiKey = "fca_live_KHEgKpgFRHwf9JNzg9ehYCIyuhKMQfSnN1IagmeE";
-  let m = 0;
   useEffect(() => {
     convert();
   }, [toCurrency, fromCurrency, amount]);
@@ -55,7 +29,7 @@ const Homepage = () => {
         `https://api.freecurrencyapi.com/v1/latest?base_currency=${fromCurrency}&currencies=${toCurrency}&apikey=${apiKey}`
       );
 
-      m = response.data.data[toCurrency];
+      const m = response.data.data[toCurrency];
       setuniAmount(m);
       setResult(amount * m);
     }, 0);
