@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+# Project Title
+Currency Converter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+I will be building a very simple currency converter website with the help of an API with the list of countries. 
+### Problem
 
-In the project directory, you can run:
+My application needs an external API with api key, It is integrating with the backend by express.js and the data will be stored in mysql database
 
-### `npm start`
+### User Profile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+--User can convert to designated currency from a specified currency
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features
 
-### `npm test`
+- As a user, I can convert currency from a specific country to a concerned country
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- As a logged in user, I can convert currency and being able to send money to different country
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Implementation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- MySQL
+- Express
+- Client libraries: 
+    - react
+    - react-router
+    - axios
+- Server libraries:
+    - knex
+    - express
+    - mysql
 
-### `npm run eject`
+### APIs
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-  external APIs will be used.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Sitemap
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Home page
+- Register Page
+- Login Page
+- Currency Converter
+- Send Money
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Mockups
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![](sql-diagram.png)
 
-### Analyzing the Bundle Size
+### Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**POST /users/register**
 
-### Advanced Configuration
+- Add a user account
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Parameters:
 
-### Deployment
+- email: User's email
+- password: User's provided password
+-Dob:user's Dob
+Response:
+```
+{
+    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**POST /users/login**
 
-### `npm run build` fails to minify
+- Login a user
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Parameters:
+- email: User's email
+- password: User's provided password
+
+Response:
+```
+{
+    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+}
+```
+
+### Auth
+
+- JWT auth
+    - Before adding auth, all API requests will be using a fake user with id 1
+    - Added after core features have first been implemented
+    - Store JWT in localStorage, remove when a user logs out
+    - Add states for logged in showing different UI in places listed in mockups
+
+## Roadmap
+
+- Create client
+    - react project with routes and boilerplate pages
+
+- Create server
+    - express project with routing, with placeholder 200 responses
+
+- Create migrations
+
+- Gather some user information in database
+
+- Create seeds with User database table
+
+- Deploy client and server projects so all commits will be reflected in production
+
+
+
+- Feature: Home page
+
+- Feature: Create account
+    - Implement register page + form
+    - Create POST /registerUser endpoint
+
+- Feature: Login
+    - Implement login page + form
+    - Create POST /registerUsers/loginUser endpoint
+
+- Feature: Implement JWT tokens
+    - Server: Update expected requests / responses on protected endpoints
+    - Client: Store JWT in local storage, include JWT on axios calls
+
+- Bug fixes
+
+- DEMO DAY
+
+## Nice-to-haves
+
+- Integrate to add card information while sending money

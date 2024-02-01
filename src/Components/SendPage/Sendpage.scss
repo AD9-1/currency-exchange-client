@@ -1,0 +1,37 @@
+.send-field {
+  height: 380px;
+  width: 75%;
+  background-color: aliceblue;
+  position: absolute;
+  left: 13%;
+  top: 280px;
+  opacity: 90%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  &__button {
+    width: 15%;
+    height: 60px;
+    margin: auto;
+    position: relative;
+    top: 40%;
+    .send-button {
+      box-sizing: border-box;
+      background-color: rgb(52, 88, 206);
+      border: 1px solid grey;
+      border-radius: 3px 3px;
+      height: 45px;
+      color: white;
+    }
+  }
+  &__statement {
+    margin: auto;
+    text-align: center;
+  }
+  &__list {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    z-index:1
+  }
+}
