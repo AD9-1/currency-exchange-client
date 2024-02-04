@@ -7,7 +7,7 @@ const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-  // const [isLoginin, setIsLoginin] = useState(false);
+
   const formRef = useRef();
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
@@ -28,13 +28,12 @@ const Signin = () => {
           "http://localhost:5000/registerUsers/loginUser",
           newUser
         );
-        //setIsLoginin(true);
+
         sessionStorage.setItem("jwtToken", response.data.token);
         setErrorMsg(response.data.message);
         navigate(`/${response.data.userId}`);
         console.log(response.data.userId);
       } catch (error) {
-        //setIsLoginin(false);
         setErrorMsg(error.response.data.message);
         console.log(error);
       }
@@ -47,7 +46,7 @@ const Signin = () => {
 
   return (
     <form ref={formRef} onSubmit={handleSubmit}>
-      <div className="register-field">
+      <div className="register-field signin">
         <h2>Sign-in</h2>
 
         <section className="register-field__section">

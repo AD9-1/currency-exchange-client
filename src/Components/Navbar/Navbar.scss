@@ -1,29 +1,32 @@
 .navbar {
-  position:relative;
-  background-image: url("/Assets/istockphoto.jpg");
+  position: relative;
+  background-image: linear-gradient(
+      45deg,
+      rgba(226, 24, 71, 0.75),
+      rgba(34, 31, 221, 0.75)
+    ),
+    url("/Assets/background.jpg");
   height: 500px;
-  background-size: cover;
+  background-size: round($number: 6);
   display: flex;
   justify-content: space-between;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
-  p {
+  div {
     box-sizing: border-box;
-    background-color: white;
+    background-color: rgb(181, 177, 237);
     opacity: 0.6;
     height: 20%;
-    margin-top: 0;
     width: 20%;
-    padding-top: 20px;
-    color: rgba(0, 0, 255, 0.685);
-    font-size: 20px;
-
-    font-weight: bolder;
+    text-align: center;
+    padding-top: 1px;
+    img {
+      width: 220px;
+      height: 120px;
+    }
   }
   &__unorderedlist {
     display: flex;
-    background-color: white;
+    background-color: rgba(191, 199, 235, 0.815);
     opacity: 0.9;
     padding-left: 0;
     list-style: none;
@@ -32,9 +35,9 @@
     height: 20%;
     margin-top: 0;
     width: 80%;
-    color: rgba(0, 0, 255, 0.685);
+    color: rgba(5, 5, 223, 0.817);
     font-weight: 700;
-    font-size: small;
+    font-size: 20px;
     li {
       &:hover {
         border: none;

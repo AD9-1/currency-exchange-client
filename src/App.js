@@ -6,6 +6,7 @@ import Sendpage from "./Components/SendPage/Sendpage";
 import Register from "./Components/RegisterPage/Register";
 import Signin from "./Components/Sign-inPage/Signin";
 import Logout from "./Components/Logout/Logout";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/:userId" element={<Homepage />} />
           <Route path="/logout" element={<Logout />}></Route>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

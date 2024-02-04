@@ -1,7 +1,7 @@
 .container {
   height: 280px;
   width: 50%;
-  background-color: aliceblue;
+  background-color: rgb(138, 165, 232);
   opacity: 95%;
   position: absolute;
   left: 25%;
@@ -9,10 +9,11 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   p {
+    margin-top: 45px;
     font-size: 28px;
     text-align: center;
     margin-bottom: 5rem;
-    color: #520d98e0;
+    color: #271dabe0;
   }
   &__button {
     margin: auto;
@@ -22,10 +23,11 @@
     button {
       width: 130px;
       height: 40px;
-      background-color: rgb(120, 117, 173);
+      background-color: rgb(101, 94, 221);
       border: 1px solid grey;
+      box-shadow: 4px 4px #744a4a;
       border-radius: 3px 3px;
-      color: #520d98e0;
+      color: white;
       font-size: 20px;
     }
   }

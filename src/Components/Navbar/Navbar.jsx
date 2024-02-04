@@ -1,11 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../../Assets/SafeCurrency-logo (1).png";
 import "./Navbar.scss";
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <p> CurrencyEx</p>
+      <div>
+        <NavLink to="/">
+          {" "}
+          <img src={logo} />
+        </NavLink>
+      </div>
       <ul className="navbar__unorderedlist">
         <NavLink to="/" className="navlink">
           <li> Converter</li>

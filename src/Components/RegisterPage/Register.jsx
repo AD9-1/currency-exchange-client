@@ -104,7 +104,7 @@ const Register = () => {
       </section>
 
       <section className="register-field__section">
-        <label className="label-dob">Date of Birth :</label>&nbsp;&nbsp;
+        <label className="label-dob">Date of Birth :</label>&nbsp;
         <input
           className={error ? "register-dob focus" : "register-dob"}
           type="date"

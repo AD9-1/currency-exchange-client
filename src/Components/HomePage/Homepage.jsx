@@ -4,6 +4,7 @@ import currencies from "../../data";
 import "./Homepage.scss";
 import "primeicons/primeicons.css";
 import { useNavigate, useParams } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 const Homepage = () => {
   const [toCurrency, setToCurrency] = useState("INR");
@@ -69,7 +70,7 @@ const Homepage = () => {
             result,
             toCurrency,
             userId,
-            userInfoId: response.data.userId,
+            userInfoId: response.data.userInfoId,
             userName: response.data.username,
           },
         });

@@ -1,0 +1,33 @@
+.firstpart {
+  width: 20%;
+  height: 250px;
+}
+
+.send1-field {
+  width: 100%;
+  position: absolute;
+
+  top: 230px;
+  opacity: 90%;
+  display: flex;
+  justify-content: space-evenly;
+
+  &__list {
+    padding: 30px;
+    background-color: aliceblue;
+    border-radius: 20px 20px;
+    box-shadow: 4px 4px #ab88da;
+    h2,
+    p {
+      text-align: center;
+      color: rgb(124, 105, 181);
+    }
+    &__history {
+      color: rgb(124, 105, 181);
+      margin-bottom: 10px;
+      list-style-type: decimal;
+      border: 1px dashed rgb(124, 105, 181);
+      padding: 4px;
+    }
+  }
+}
