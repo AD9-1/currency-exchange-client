@@ -52,6 +52,10 @@ My application needs an external API with api key, It is integrating with the ba
 
 ### Endpoints
 
+
+"token": "fca_live_KHEgKpgFRHwf9JNzg9ehYCIyuhKMQfSnN1IagmeE"
+
+
 **POST (http://localhost:5000/registerUsers)**
 
 - Add a user account
@@ -64,10 +68,6 @@ Parameters:
   Response:
 
 ```
-{
-    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
-}
-```
 
 **POST (http://localhost:5000/registerUsers/loginUser)**
 
@@ -78,13 +78,6 @@ Parameters:
 - email: User's email
 - password: User's provided password
 
-Response:
-
-```
-{
-    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
-}
-```
 
 ### Auth
 
