@@ -1,9 +1,13 @@
+# The backend github is currency-exchange-api
+
 # Project Title
-Currency Converter
+
+SafeCurrency
 
 ## Overview
 
-I will be building a very simple currency converter website with the help of an API with the list of countries. 
+I will be building a very simple currency converter website with the help of an API with the list of countries.
+
 ### Problem
 
 My application needs an external API with api key, It is integrating with the backend by express.js and the data will be stored in mysql database
@@ -16,7 +20,6 @@ My application needs an external API with api key, It is integrating with the ba
 
 - As a user, I can convert currency from a specific country to a concerned country
 
-
 - As a logged in user, I can convert currency and being able to send money to different country
 
 ## Implementation
@@ -26,18 +29,18 @@ My application needs an external API with api key, It is integrating with the ba
 - React
 - MySQL
 - Express
-- Client libraries: 
-    - react
-    - react-router
-    - axios
+- Client libraries:
+  - react
+  - react-router
+  - axios
 - Server libraries:
-    - knex
-    - express
-    - mysql
+  - knex
+  - express
+  - mysql
 
 ### APIs
 
--  external APIs will be used.
+- external APIs will be used.
 
 ### Sitemap
 
@@ -47,20 +50,9 @@ My application needs an external API with api key, It is integrating with the ba
 - Currency Converter
 - Send Money
 
-### Mockups
-
-
-
-
-### Data
-
-![](sql-diagram.png)
-
 ### Endpoints
 
-
-
-**POST /users/register**
+**POST (http://localhost:5000/registerUsers)**
 
 - Add a user account
 
@@ -68,23 +60,26 @@ Parameters:
 
 - email: User's email
 - password: User's provided password
--Dob:user's Dob
-Response:
+  -Dob:user's Dob
+  Response:
+
 ```
 {
     "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
 }
 ```
 
-**POST /users/login**
+**POST (http://localhost:5000/registerUsers/loginUser)**
 
 - Login a user
 
 Parameters:
+
 - email: User's email
 - password: User's provided password
 
 Response:
+
 ```
 {
     "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
@@ -94,18 +89,20 @@ Response:
 ### Auth
 
 - JWT auth
-    - Before adding auth, all API requests will be using a fake user with id 1
-    - Added after core features have first been implemented
-    - Store JWT in localStorage, remove when a user logs out
-    - Add states for logged in showing different UI in places listed in mockups
+  - Before adding auth, all API requests will be using a fake user with id 1
+  - Added after core features have first been implemented
+  - Store JWT in localStorage, remove when a user logs out
+  - Add states for logged in showing different UI in places listed in mockups
 
 ## Roadmap
 
 - Create client
-    - react project with routes and boilerplate pages
+
+  - react project with routes and boilerplate pages
 
 - Create server
-    - express project with routing, with placeholder 200 responses
+
+  - express project with routing, with placeholder 200 responses
 
 - Create migrations
 
@@ -115,21 +112,22 @@ Response:
 
 - Deploy client and server projects so all commits will be reflected in production
 
-
-
 - Feature: Home page
 
 - Feature: Create account
-    - Implement register page + form
-    - Create POST /registerUser endpoint
+
+  - Implement register page + form
+  - Create POST /registerUser endpoint
 
 - Feature: Login
-    - Implement login page + form
-    - Create POST /registerUsers/loginUser endpoint
+
+  - Implement login page + form
+  - Create POST /registerUsers/loginUser endpoint
 
 - Feature: Implement JWT tokens
-    - Server: Update expected requests / responses on protected endpoints
-    - Client: Store JWT in local storage, include JWT on axios calls
+
+  - Server: Update expected requests / responses on protected endpoints
+  - Client: Store JWT in local storage, include JWT on axios calls
 
 - Bug fixes
 
