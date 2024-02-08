@@ -10,6 +10,7 @@ const ListUserInfo = (props) => {
           {" "}
           You can send {props.result} {props.tocurrency}
         </p>
+        
       </section>
 
       <section className="send1-field__list">
